@@ -35,13 +35,17 @@
             - Lookup the owner's name, photos and online profiles. See what you find!
           </div>
 
-          <form name="emailForm" class="search-box">
+          <form name="emailForm" method="GET" action="/emailSearchResult.html" class="search-box">
             <div id="emailFormGroup" class="form-group floating-label-container">
               <label id="emailLabel" for="email">Email</label>
               <label id="invalidEmailLable"></label>
-              <input type="email" id="email" name="emailInput" required />
+              <input type="email" id="email" name="email" required />
             </div>
-            <button class="btn-banner" onclick="ValidateEmail(document.emailForm.emailInput)">
+            <button
+              class="btn-banner"
+              type="submit"
+              onclick="ValidateEmail(document.emailForm.email)"
+            >
               GO!
             </button>
           </form>

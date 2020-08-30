@@ -1,5 +1,11 @@
 'use strict';
 
+setTimeout(() => {
+  if (document.getElementById('email').value.length > 0) {
+    document.getElementById('emailFormGroup').classList.add('active');
+  }
+}, 200);
+
 var FloatLabel = (function () {
   // add active class
   var handleFocus = function handleFocus(e) {

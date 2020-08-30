@@ -1,0 +1,19 @@
+.loading-animation {
+  animation: loadingJ 2s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+  height: 2em;
+  border-radius: 1em;
+  width: 200px;
+  display: inline-block;
+}
+
+@keyframes loadingJ {
+  0%,
+  100% {
+    width: 0%;
+  }
+
+  50% {
+    background-color: #f5634a;
+    width: 100%;
+  }
+}
