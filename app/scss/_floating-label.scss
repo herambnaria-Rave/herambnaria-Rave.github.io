@@ -1,6 +1,9 @@
 .floating-label-container {
   padding: 0 8px;
   position: relative;
+  &.invalid {
+    border: 1px solid red;
+  }
 
   input {
     border: none;
@@ -21,8 +24,11 @@
   /** active label */
   &.active {
     label {
-      //move the x coordinate and reduce size
-      transform: translate(0.25em, 4px) scale(0.75);
+      //move the y coordinate
+      transform: translate(0.5em, 4px) scale(1);
+    }
+    input {
+      padding-top: 1em;
     }
   }
 }

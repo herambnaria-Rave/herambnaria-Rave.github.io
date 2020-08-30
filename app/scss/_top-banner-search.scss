@@ -31,6 +31,10 @@
         letter-spacing: 2px;
         font-weight: bold;
         text-transform: uppercase;
+        &#invalidEmailLable {
+          text-transform: none;
+          color: red;
+        }
       }
       input {
         display: block;
@@ -38,7 +42,8 @@
         width: 100%;
         border-radius: 5px;
         border-width: 0;
-        height: 4em;
+        height: 3em;
+        font-size: 1.5em;
       }
     }
     .btn-banner {

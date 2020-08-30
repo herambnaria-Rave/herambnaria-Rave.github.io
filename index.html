@@ -35,12 +35,15 @@
             - Lookup the owner's name, photos and online profiles. See what you find!
           </div>
 
-          <form action="submit" class="search-box">
-            <div class="form-group floating-label-container">
-              <label for="email">Email</label>
-              <input type="text" id="email" name="email" />
+          <form name="emailForm" class="search-box">
+            <div id="emailFormGroup" class="form-group floating-label-container">
+              <label id="emailLabel" for="email">Email</label>
+              <label id="invalidEmailLable"></label>
+              <input type="email" id="email" name="emailInput" required />
             </div>
-            <button class="btn-banner">GO!</button>
+            <button class="btn-banner" onclick="ValidateEmail(document.emailForm.emailInput)">
+              GO!
+            </button>
           </form>
 
           <div class="banner-sub-message">
@@ -167,6 +170,7 @@
         </div>
       </div>
     </footer>
+    <script src="dist/js/emailValidation.js"></script>
     <script src="dist/js/search.js"></script>
     <script src="dist/js/floatingLabel.js"></script>
   </body>

@@ -9,4 +9,11 @@
   background-image: linear-gradient(to right, $yellowDark, $yellowLight);
   padding: 0.75em 3em;
   box-shadow: inset 0px 1px 0px 0px #ffffff;
+  cursor: pointer;
+  &:hover {
+    background-image: linear-gradient(to right, $yellowLight, $yellowLight);
+  }
+  &:focus {
+    background-image: linear-gradient(to right, $yellowDark, $yellowDark);
+  }
 }
