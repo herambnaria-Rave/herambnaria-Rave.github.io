@@ -1,0 +1,55 @@
+.top-banner-search {
+  padding-top: 2em;
+  padding-bottom: 4em;
+  background-color: $blue;
+  color: $white;
+  h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+  }
+  .banner-message {
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 1.5em;
+    strong {
+      color: $yellowDark;
+    }
+  }
+  .search-box {
+    display: flex;
+    align-items: stretch;
+    margin-top: 1em;
+    .form-group {
+      flex: 1;
+      display: flex;
+      align-items: stretch;
+      position: relative;
+      padding: 0 0;
+      label {
+        color: $grey;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      input {
+        width: 100%;
+        border-radius: 5px;
+        border-width: 0;
+      }
+    }
+    .btn-banner {
+      margin-left: 1em;
+    }
+  }
+  .banner-sub-message {
+    font-size: 1em;
+    margin-top: 1.5em;
+    color: $yellowDark;
+    font-weight: bold;
+    .fa {
+      margin-right: 0.5em;
+    }
+  }
+}

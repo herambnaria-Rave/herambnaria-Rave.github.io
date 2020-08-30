@@ -1,0 +1,29 @@
+.floating-label-container {
+  padding: 0 8px;
+  position: relative;
+  width: 300px;
+
+  input {
+    border: none;
+    font-size: 1em;
+    outline: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  label {
+    font-size: 1em;
+    position: absolute;
+    transform-origin: top left;
+    transform: translate(0.5em, 1.4em) scale(1);
+    transition: all 0.1s ease-in-out; //speed
+  }
+
+  /** active label */
+  &.active {
+    label {
+      //move the x coordinate and reduce size
+      transform: translate(0.25em, 4px) scale(0.75);
+    }
+  }
+}
