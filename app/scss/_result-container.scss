@@ -1,3 +1,12 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .flex-1 {
+    flex: 1;
+  }
+}
+
 #resultsCard {
   display: none;
 }
@@ -5,13 +14,21 @@
   height: 2em;
 }
 #noResultsFound {
+  text-align: center;
   display: none;
   color: $blue;
   padding-left: 1em;
   padding-right: 1em;
 }
+#resultError {
+  text-align: center;
+  display: none;
+  color: $red;
+  padding-left: 1em;
+  padding-right: 1em;
+}
 .results-container {
-  padding-bottom: 2em;
+  padding-bottom: 4em;
   .results-section-header {
     h1 {
       font-size: 2.5em;

@@ -1,6 +1,7 @@
 'use strict';
 
 setTimeout(() => {
+  //set active call on input on load if the input is already filled like when user clicks on back button
   if (document.getElementById('email').value.length > 0) {
     document.getElementById('emailFormGroup').classList.add('active');
   }

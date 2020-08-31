@@ -1,17 +1,15 @@
-const queryString = window.location.search;
-
-const urlParams = new URLSearchParams(queryString);
-
-const emailQuery = urlParams.get('email');
-
-console.log(emailQuery);
-
+//reading the url
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+var emailQuery = urlParams.get('email');
+// console.log(emailQuery);
+//using a proxy server as the api is giving a cors error
 var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
   targetUrl = 'https://ltv-data-api.herokuapp.com/api/v1/records.json?email=' + emailQuery;
 fetch(proxyUrl + targetUrl)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
+    // console.log(data);
     if (data.length == 0) {
       document.getElementById('resultLoading').style.display = 'none';
       document.getElementById('noResultsFound').style.display = 'block';
@@ -39,4 +37,11 @@ fetch(proxyUrl + targetUrl)
       }
     }
   })
-  .catch((error) => console.error(error));
+  .catch((error) => {
+    console.error(error);
+    //set time
+    setTimeout(() => {
+      document.getElementById('resultLoading').style.display = 'none';
+      document.getElementById('resultError').style.display = 'block';
+    }, 1000);
+  });

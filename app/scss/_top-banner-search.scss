@@ -33,7 +33,7 @@
         text-transform: uppercase;
         &#invalidEmailLable {
           text-transform: none;
-          color: red;
+          color: $red;
         }
       }
       input {
@@ -41,7 +41,7 @@
         box-sizing: border-box;
         width: 100%;
         border-radius: 5px;
-        border-width: 0;
+        border-width: 2px;
         height: 3em;
         font-size: 1.5em;
       }
@@ -99,8 +99,6 @@
           font-weight: bold;
           text-transform: uppercase;
         }
-        input {
-        }
       }
       .btn-banner {
         margin-left: 1em;
@@ -144,8 +142,6 @@
         }
         input {
           width: 100%;
-          border-radius: 5px;
-          border-width: 0;
         }
       }
       .btn-banner {
